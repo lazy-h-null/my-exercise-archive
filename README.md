@@ -13,3 +13,13 @@
 | 5 | Profile Card | `challenge/05-profile-card` | ⏳ Pending |
 
 ## Outputs
+
+### Challenge 1 — Personalised Greeting
+
+**Concepts:** `input()`, f-strings, string concatenation
+
+**Solution file:** `challenge_01_greeting.py`
+
+**Output:**
+
+![Challenge 1 Output](screenshots/challenge_01_output.png)
