@@ -33,3 +33,13 @@
 **Output:**
 
 ![Challenge 2 Output](screenshots/challenge_02_output.png)
+
+### Challenge 3 — Temperature Converter
+
+**Concepts:** `input()`, `float()`, arithmetic, f-strings with formatting
+
+**Solution file:** `challenge_03_temperature_converter.py`
+
+**Output:**
+
+![Challenge 3 Output](screenshots/challenge_03_output.png)
