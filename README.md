@@ -16,8 +16,8 @@ and concatenation only. No parsers, no libraries — pure string primitives.
 |---|-----------|--------|--------|
 | 1 | Update Page Metadata | `challenge/01-metadata` | ✅ Done |
 | 2 | Update Stylesheet and Script Sources | `challenge/02-assets` | ✅ Done |
-| 3 | Inject Heading Tags | `challenge/03-headings` | ⏳ Pending |
-| 4 | Add Paragraph and Image Tags | `challenge/04-content` | ⏳ Pending |
+| 3 | Inject Heading Tags | `challenge/03-headings` | ✅ Done |
+| 4 | Add Paragraph and Image Tags | `challenge/04-content` | ✅ Done |
 | 5 | Full Page Builder | `challenge/05-full-page` | ⏳ Pending |
 
 ## Outputs
@@ -25,7 +25,9 @@ and concatenation only. No parsers, no libraries — pure string primitives.
 ### Challenge 1 — Update Page Metadata
 
 **Concepts:** `.replace()`, f-strings, string concatenation
+
 **Solution file:** `challenge_01_metadata.py`
+
 **HTML output file:** `html_outputs/challenge_01_output.html`
 
 **Terminal output:**
@@ -34,8 +36,32 @@ and concatenation only. No parsers, no libraries — pure string primitives.
 ### Challenge 2 — Update Stylesheet and Script Sources
 
 **Concepts:** `.find()`, `.index()`, string slicing
+
 **Solution file:** `challenge_02_stylesheets_and_scripts.py`
+
 **HTML output file:** `html_outputs/challenge_02_output.html`
 
 **Terminal output:**
 ![Challenge 2 Terminal](screenshots/challenge_02_terminal.png)
+
+### Challenge 3 — Inject Heading Tags
+
+**Concepts:** `.split()`, string concatenation, multi-line string building
+
+**Solution file:** `challenge_03_headings.py`
+
+**HTML output file:** `html_outputs/challenge_03_output.html`
+
+**Terminal output:**
+![Challenge 3 Terminal](screenshots/challenge_03_terminal.png)
+
+### Challenge 4 — Add Paragraph and Image Tags
+
+**Concepts:** `.find()`, `.rfind()`, multi-step string reconstruction
+
+**Solution file:** `challenge_04_content.py`
+
+**HTML output file:** `html_outputs/challenge_04_output.html`
+
+**Terminal output:**
+![Challenge 4 Terminal](screenshots/challenge_04_terminal.png)
