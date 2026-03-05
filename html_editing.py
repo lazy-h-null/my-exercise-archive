@@ -69,7 +69,7 @@ def generate_website():
        <!-- row 4 -->
       <tr class="bg-base-200/50 animate-pulse">
         <th>4</th>
-        <td colspan="3" class="italic text-xl py-6 text-base-content/60 justify-center tracking-widest">Waiting for the Next Legend...</td>
+        <td colspan="3" class="italic text-xl py-6 text-base-content/60 text-center tracking-widest">Waiting for the Next Legend......</td>
       </tr>
     </tbody>
     </table>
