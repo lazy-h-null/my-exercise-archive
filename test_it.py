@@ -21,6 +21,5 @@ print_labeled_separator("START")
 print_labeled_separator("DONE", char="-", width=40)
 
 print_box("Hello, World!")
-print_box("You are a Python Developer!")
 
 print_fishing()
