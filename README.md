@@ -1,5 +1,6 @@
 # My Exercise Archive
-A chronological archive of my coding exercises and lecture assignments. Each folder represents a specific milestone, assignment, or daily exercise. By consolidating my scattered repositories into this structured directory, I can easily revisit my past work and track the evolution of my problem-solving abilities.
+This is a timeline of my coding exercises and class assignments. Each folder shows a specific lesson or homework. By putting all my old projects into this one place, I can easily look back at my work and see how much I’ve improved.
+
 
 ## 📂 Project Directory
 | Folder | Project / Topic | Description | Source / Demo | Status
