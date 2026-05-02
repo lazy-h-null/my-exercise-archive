@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Profile</title></head>
+<body>
+      {% if user.is_authenticated %}
+  <nav>
+    <a href="/dashboard/">Dashboard</a>
+    <a href="/profile/">Profile</a>
+    <a href="/event/">Event</a>
+  </nav>
+  {% endif %}
+  
+  <h1>Hello, {{ user.username }}!</h1>
+  <p>Welcome to your profile.</p>
+  <a href="/logout/"><button>Logout</button></a>
+</body>
+</html>
