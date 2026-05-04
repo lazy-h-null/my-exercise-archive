@@ -1,0 +1,9 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Zoo</h1>
+<p>Currently, we have <strong>{{ total_animals }}</strong>animals.</p>
+<a href="{% url 'animals:animal-list' %}">View all animals</a>
+{% endblock %}

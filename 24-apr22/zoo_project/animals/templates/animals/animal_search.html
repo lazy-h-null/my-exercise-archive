@@ -1,0 +1,21 @@
+{% extends 'animals/base.html' %}
+{% block content %}
+<h1>Search Animals</h1>
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+</form>
+
+{% if search_performed %}
+    <h2>Results</h2>
+    {% if results %}
+        <ul>
+            {% for animal in results %}
+                <li>{{ animal.name }} (Age: {{ animal.age }})</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+{% endif %}
+{% endblock %}

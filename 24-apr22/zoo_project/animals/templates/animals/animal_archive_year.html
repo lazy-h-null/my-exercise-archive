@@ -1,0 +1,9 @@
+{% extends 'animals/base.html' %}
+{% block content %}
+<h1>Animals Added in {{ year.year }}</h1>
+<ul>
+    {% for animal in object_list %}
+        <li>{{ animal.name }} (Added: {{ animal.date_added }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

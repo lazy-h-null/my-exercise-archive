@@ -1,0 +1,10 @@
+{% extends 'animals/base.html' %}
+{% block content %}
+<h1>{{ form_action  }} Animal</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" style="padding: 5px 15px;">Save {{ form_actoin }}</button>
+</form>
+<a href="{% url 'animals:animal-list' %}">Cancel</a>
+{% endblock %}
