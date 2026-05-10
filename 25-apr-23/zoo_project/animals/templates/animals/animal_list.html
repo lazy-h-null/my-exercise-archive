@@ -1,0 +1,46 @@
+{% extends 'animals/base.html' %}
+{% block heading %}Animal Inventory{% endblock %}
+
+{% block content %}
+    <form method="get" action="{% url 'animals:animal-list' %}" class="mb-5">
+        <input type="text" name="q" placeholder="Search name..." class="input input-bordered">
+        <button type="submit" class="btn">Search</button>
+    </form>
+
+    <table class="table table-zebra w-full border text-lg">
+        <thead class="bg-gray-200">
+            <tr>
+                <th>Name/</th>
+                <th>Age/</th>
+                <th>Weight/</th>
+                <th>Actions/</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in animals %}
+            <tr>
+                <td>{{ animal.name }}</td>
+                <td>{{ animal.age }}</td>
+                <td>{{ animal.weight }} kg</td>
+                <td>
+                    <a href="{% url 'animals:animal-detail' animal.pk %}" class="btn btn-xs">View</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="4">No animals found.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="mt-5 space-x-2">
+        {% if is_paginated %}
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-sm">Prev</a>
+            {% endif %}
+            <span>Page {{ page_obj.number }}</span>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="btn btn-sm">Next</a>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'animals/base.html' %}
+{% block heading %}Login Page{% endblock %}
+{% block content %}
+<div class="max-w-sm">
+    <form method="post" class="space-y-4">
+        {% csrf_token %}
+        <div class="border p-5 rounded">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-primary px-10">Login</button>
+    </form>
+    <div class="mt-10 pt-5 border-t">
+        <p class="mt-4">No account? <a href="{% url 'animals:signup' %}" class="text-blue-500">Sign up here</a></p>
+    </div>
+</div>
+{% endblock %}

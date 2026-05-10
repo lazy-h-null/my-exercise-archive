@@ -1,0 +1,22 @@
+{% extends 'animals/base.html' %}
+{% block heading %}Archive Index{% endblock %}
+{% block content %}
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <h3 class="font-bold text-lg mb-2">Latest Animals</h3>
+            <ul class="list-disc pl-5">
+                {% for animal in latest %}
+                <li>{{ animal.name }} ({{ animal.date_added }})</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-bold text-lg mb-2">Archive by Year</h3>
+            <ul class="list-disc pl-5">
+                {% for date in date_list %}
+                <li><a href="{% url 'animals:animal-year-archive' date.year %}" class="text-blue-500">{{ date.year }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

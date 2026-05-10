@@ -1,0 +1,14 @@
+{% extends 'animals/base.html' %}
+{% block heading %}
+    {% if object %} Edit {{ object.name }} {% else %} Add New Animal {% endif %}
+{% endblock %}
+{% block content %}
+<div class="max-w-lg border p-5 rounded">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success text-white mt-4">Save Animal</button>
+        <a href="{% url 'animals:animal-list' %}" class="btn btn-ghost mt-4">Cancel</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'animals/base.html' %}
+{% block heading %}Animal Details: {{ object.name }}{% endblock %}
+{% block content %}
+<div class="border p-8 rounded-lg space-y-4">
+    <p><b>Name:</b> {{ animal.name }}</p>
+    <p><b>Age:</b> {{ animal.age }} years old</p>
+    <p><b>Weight:</b> {{ animal.weight }} kg</p>
+    <p><b>Born in Captivity:</b> {{ animal.born_in_captivity|yesno:"Yes,No" }}</p>
+    <p><b>Added on:</b> {{ animal.date_added }}</p>
+    <div>
+        <a href="{% url 'animals:animal-update' animal.pk %}" class="btn btn-warning">Edit</a>
+        <a href="{% url 'animals:animal-delete' animal.pk %}" class="btn btn-error text-white">Delete</a>
+        <a href="{% url 'animals:animal-list' %}" class="btn">Back to List</a>
+    </div>
+</div>
+{% endblock %}

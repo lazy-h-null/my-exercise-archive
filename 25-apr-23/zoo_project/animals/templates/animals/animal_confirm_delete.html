@@ -1,0 +1,12 @@
+{% extends 'animals/base.html' %}
+{% block heading %}Are you sure?{% endblock %}
+{% block content %}
+<div class="border p-10 rounded border-red-200 bg-red-50">
+    <p class="mb-5 text-lg">Do you really want to delete <b>"{{ object.name }}"</b>?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-error text-white">Yes, Delete</button>
+        <a href="{% url 'animals:animal-detail' object.pk %}" class="btn">Cancel</a>
+    </form>
+</div>
+{% endblock %}

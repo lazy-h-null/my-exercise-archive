@@ -1,0 +1,30 @@
+{% extends 'animals/base.html' %}
+{% block heading %}Search Animals{% endblock %}
+{% block content %}
+<div class="max-w-xl mb-10">
+    <form method="get" action="{% url 'animals:animal-search' %}" class="flex gap-2">
+        <input type="text" name="q" placeholder="Enter animal name..." class="input input-bordered w-full" value="{{ request.GET.q }}">
+        <button type="submit" class="btn btn-primary">Search Now</button>
+    </form>
+</div>
+
+{% if request.GET.q %}
+    <h2 class="text-xl mb-4">Results for "{{ request.GET.q }}"</h2>
+    <table class="table border">
+        <thead>
+            <tr><th>Name</th><th>Age</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+            {% for animal in animals %}
+            <tr>
+                <td>{{ animal.name }}</td>
+                <td>{{ animal.age }}</td>
+                <td><a href="{% url 'animals:animal-detail' animal.pk %}" class="btn btn-xs">View</a></td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="3">No animals found with that name.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+{% endblock %}
